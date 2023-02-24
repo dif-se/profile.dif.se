@@ -1,0 +1,659 @@
+::selection {
+  background: #cfb571; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #cfb571; /* Gecko Browsers */
+}
+
+	.big-link {
+		position: absolute;
+		padding: $gutter*1;
+	}
+
+	.responsive-type {
+		font-size: 9vw;
+		line-height: 8vw;
+	}
+
+
+/* Borders */
+	.b-top {
+		border-top: 1px solid $medium-grey;
+		padding-top: $gutter;
+	}
+
+	.b-top-intro {
+		border-top: 3px solid $medium-grey;
+		padding-top: $gutter;
+	}
+
+	.b-bottom {
+		border-bottom: 1px solid $medium-grey;
+		padding-bottom: $line-height;
+	}
+
+	.b-left {
+		border-left: 1px solid $medium-grey;
+		padding-left: $gutter;
+	}
+
+	.b-right {
+		border-right: 1px solid $medium-grey;
+		padding-right: $gutter;
+	}
+
+
+	.border {
+		border: 1px solid $dark-grey;
+	}
+
+/* Typography */
+	body {
+		color: #1a1a1a;
+	}
+
+	p {
+		font-size: $font-size;
+		line-height: $line-height;
+		padding-bottom: $line-height;
+	}	
+
+	h5 {
+		font-size: $font-size*1.5;
+		line-height: $line-height*1.4;
+		padding-bottom: $line-height*1.5;
+		@media only screen and (max-width: $medium) {
+			font-size: $font-size;
+			line-height: $line-height;
+			padding-bottom: $line-height;
+		}
+	}
+
+	h4 {
+		font-size: $font-size;
+		line-height: $line-height;
+		padding-bottom: $line-height;
+		@media only screen and (min-width: $small) {
+			font-size: $font-size;
+			line-height: $line-height;
+			padding-bottom: $line-height;
+		}
+		@media only screen and (min-width: $medium) {
+			font-size: $font-size*1.4;
+			line-height: $line-height*1.4;
+			padding-bottom: $line-height*1.4;
+		}
+		@media only screen and (min-width: $large) {
+			font-size: $font-size*1.4;
+			line-height: $line-height*1.4;
+			padding-bottom: $line-height*1.4;
+		}
+	}
+
+	h3 {
+		font-size: $font-size*1.8;
+		line-height: $line-height*1.6;
+		padding-bottom: $line-height*1.6;
+		@media only screen and (max-width: $medium) {
+			font-size: $font-size*1.8;
+			line-height: $line-height*1.6;
+			padding-bottom: $line-height*1.6;
+		}
+		@media only screen and (max-width: $small) {
+			font-size: $font-size*1.5;
+			line-height: $line-height*1.4;
+			padding-bottom: $line-height*1.4;
+		}
+	}
+
+	h2 {
+		font-size: $font-size*1.6;
+		line-height: $line-height*1.5;
+		padding-bottom: $line-height*1.5;
+		@media only screen and (min-width: $small) {
+			font-size: $font-size*2.5;
+			line-height: $line-height*2;
+			padding-bottom: $line-height*2;
+		}
+		@media only screen and (min-width: $medium) {
+			font-size: $font-size*4.5;
+			line-height: $line-height*4;
+			padding-bottom: $line-height*4;
+		}
+	}
+
+	h1 {
+		font-size: $font-size*3;
+		line-height: $line-height*2.5;
+		padding-bottom: $line-height*3;
+		@media only screen and (min-width: $xsmall) {
+			font-size: $font-size*4;
+			line-height: $line-height*3.2;
+			padding-bottom: $line-height*3.2;
+		}
+		@media only screen and (min-width: $medium) {
+			font-size: $font-size*4;
+			line-height: $line-height*3;
+			padding-bottom: $line-height*3;
+		}
+		@media only screen and (min-width: $xlarge) {
+			font-size: $font-size*6;
+			line-height: $line-height*4.2;
+			padding-bottom: $line-height*4.2;
+		}
+		@media only screen and (min-width: $jumbo) {
+			font-size: $font-size*10;
+			line-height: $line-height*8.5;
+			padding-bottom: $line-height*6.5;
+			letter-spacing: 0.08em;
+		}
+	}
+
+	.inherit-font-size {
+		font-size: inherit;
+	}
+
+	strong {
+		font-family: 'MaisonNeueBold';
+	}
+
+	p strong {
+		font-family: 'MaisonNeueMedium';
+	}
+
+	.t-medium {
+		font-family: 'MaisonNeueMedium';
+	}
+
+	.bold {
+		font-family: 'MaisonNeueBold';
+	}
+
+	.caption {
+		padding-top: $gutter;
+	}
+
+	.download {
+		color: $color-5;
+	}
+
+	.underline {
+		text-decoration: underline;
+	}
+
+
+/* General */
+	.wrapper {
+		height: 100%;
+		padding-left: $nav-side-width;
+		@media only screen and (max-width: $medium) {
+			padding-left: 0;
+		}
+		.row-16, .row-12, .row-10, .row-8, .row-7 {
+			padding-left: $row-left-right-padding*1;
+			padding-right: $row-left-right-padding*1;
+			@media only screen and (min-width: $small) {
+				padding-left: $row-left-right-padding*4;
+				padding-right: $row-left-right-padding*4;
+			}
+			@media only screen and (min-width: $medium) {
+				padding-left: $row-left-right-padding*5;
+				padding-right: $row-left-right-padding*5;
+			}
+			
+		}
+		.row-full {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+
+
+
+
+
+.main-section {
+	margin-top: $gutter*10;
+	padding-top: $gutter*5;
+}
+
+
+/* Other */
+	.color-name {
+		display: block;
+		width: 100%;
+	}
+
+/******* Scrollbar *******/
+	::-webkit-scrollbar {
+	      width: 15px;
+	} /* this targets the default scrollbar (compulsory) */
+
+	::-webkit-scrollbar-track {
+	      background-color: #eee;
+	} /* the new scrollbar will have a flat appearance with the set background color */
+	 
+	::-webkit-scrollbar-thumb {
+	      background-color: rgba(0, 0, 0, 0.07); 
+	} /* this will style the thumb, ignoring the track */
+	 
+	::-webkit-scrollbar-button {
+	      background-color: #7c2929;
+	} /* optionally, you can style the top and the bottom buttons (left and right for horizontal bars) */
+	 
+	::-webkit-scrollbar-corner {
+	      background-color: black;
+	} /* if both the vertical and the horizontal bars appear, then perhaps the right bottom corner also needs to be styled */
+
+
+
+/********* HEADERS BACKGROUNDS ************/
+
+#start-bg {
+	width: 100%;
+	height: auto;
+	position: absolute;
+	z-index: -1;
+}
+#start-header {
+	background-image: url("../img/start/bg-2.svg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+#logo-bg {
+	background-image: url("../img/dif/updated/Headers/1705_headers/1.-shield.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+#typo-bg {
+	background-image: url("../img/dif/updated/Headers/1705_headers/type.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+#colour-bg {
+	background-image: url("../img/dif/updated/Headers/1705_headers/3-colours.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+#img-bg {
+	background-image: url("../img/dif/updated/Headers/1705_headers/4-imagery-1.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+#graphic-bg {
+	background-image: url("../img/dif/updated/Headers/5.-graphic_system.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+#applications-bg {
+	background-image: url("../img/dif/applications/applications_hero.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+#inspo-bg {
+	background-image: url("../img/dif/updated/Headers/DIF_Headers8.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+
+/********* BUTTONS ************/
+.download-btn {
+	border-radius: 6px;
+	display: inline-block;
+	margin-top: 30px;
+	color: $light;
+	background: linear-gradient(to right, #cfb571 50%, #002554 50%);
+    background-size: 202% 102%;
+    background-position: right bottom;
+    transition:all 300ms cubic-bezier(0.645, 0.045, 0.355, 1.000); /* easeInOutCubic */
+	padding: $line-height*0.75;
+}
+
+.download-btn:hover {
+	opacity: 1;
+	background-position: left bottom;
+}
+
+.download-btn:active {
+	color: $light;
+	background-color: $color-5-2;
+	border-bottom: 3px solid $color-5-2;
+	transition: 0.2s;
+}
+
+.tag-btn {
+	margin-left: 10px;
+	font-size: 12px;
+	display: inline-block;
+	color: $light;
+	background-color: $dark;
+	padding: $line-height/5 $line-height/2;
+	transition: 0.2s;
+}
+
+.tag-btn:hover {
+	opacity: 1;
+	background-color: $dark-grey;
+	transition: 0.2s;
+}
+
+.tag-btn:active {
+	background-color: #000;
+	transition: 0.2s;
+}
+
+.external-btn {
+	display: inline-block;
+	color: $light;
+	background-color: $color-2-1;
+	border-bottom: 3px solid $color-2-2;
+	padding: $line-height*1.5;
+	transition: 0.2s;
+}
+
+.external-btn:hover {
+	opacity: 1;
+	background-color: $color-2;
+	border-bottom: 3px solid $color-2-1;
+	transition: 0.2s;
+}
+
+.external-btn:active {
+	color: $light;
+	background-color: $color-2-2;
+	border-bottom: 3px solid $color-2-2;
+	transition: 0.2s;
+}
+
+.arrow {
+	margin-left: 30px;
+	display: inline-block;
+	height: 30px;
+	width: 30px;
+	border: solid $light;
+    border-width: 0 1px 1px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+
+/********* Backgrounds ************/
+	.relative {
+		position: relative;
+	}
+
+	.download-text {
+		position: absolute;
+	}
+
+	.block {
+		display: block;
+	}
+
+
+/* DIF CUSTOM */
+
+.hero_copy {
+	font-family: 'DifDisplay', 'MaisonNeue', sans-serif;
+	letter-spacing: 0.5em; 
+	font-size: 10.5vw;
+	line-height: 13.5vw;
+	padding-bottom: $line-height*4;
+	text-align: center;
+	margin-left: 6vw;
+}
+
+#logo {
+
+		top: 10px;
+		left: 10px;
+
+		@media only screen and (min-width: $xsmall) {
+			width: 80px;
+			height: 80px;
+		}
+		@media only screen and (min-width: $medium) {
+			width: 90px;
+			height: 90px;
+		}
+		@media only screen and (min-width: $xlarge) {
+			width: 110px;
+			height: 110px;
+		}
+		@media only screen and (min-width: $jumbo) {
+			width: 120px;
+			height: 120px;
+		}
+}
+
+#hero_logo {
+	max-width: 32%;
+	align-self: flex-start;
+	margin-bottom: 12vh;
+}
+
+.index_hero {
+	background-image: url(../img/dif/updated/Headers/Manual.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.light-blue {
+	color: #32baf2;
+}
+
+#fixed_logo img {
+	z-index: 5;
+	max-width: 10%;
+	position: absolute;
+	bottom: 30px;
+	left: 30px;
+}
+
+a:hover#fixed_logo {
+	opacity: 1;
+}
+
+.prev_next_links {
+	padding: 6rem;
+	color: #002554;
+	background: -webkit-linear-gradient(to right, #cfb571 50%, #EFEFEF 50%);
+	background: linear-gradient(to right, #cfb571 50%, #EFEFEF 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition:all 400ms cubic-bezier(0.645, 0.045, 0.355, 1.000); /* easeInOutCubic */
+}
+
+a:hover.prev_next_links {
+	background-position: left bottom;
+	opacity: 1;
+}
+
+.prev_next {
+	padding: 0 !important;
+}
+
+.prev_next_row {
+	padding: 0 !important;
+}
+
+.hero_button {
+	font-family: 'MaisonNeueBold', sans-serif;
+	border-radius: 4px;
+	flex-grow: 0;
+	background-color: $light-blue;
+	color: $dark-blue;
+	padding: 1.5rem 2rem;
+	margin-top: 4rem;
+	margin: 0 auto;
+}
+
+a:hover.hero_button {
+	opacity: 1;
+	background-color: $dark-blue;
+	color: $light-blue;
+}
+
+.lity-close {
+	display: none;
+}
+
+.dark-blue {
+	background-color: #002554;
+}
+
+.light-blue-color {
+	background-color: #32BAF2;
+}
+
+.gold {
+	background-color: #CFB571;
+}
+
+.red {
+	background-color: #E21F26;
+}
+
+.shield-blue {
+	background-color: #0568AF;
+}
+
+.shield-yellow {
+	background-color: #FFEC0D;
+}
+
+.white {
+	background-color: white;
+}
+
+.black {
+	background-color: black;
+}
+
+#top-logo {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 80px;
+	width: 70px;
+	z-index: 6;
+}
+
+#top-logo a {
+	padding-top: -20px;
+}
+
+#top-logo img {
+	background-color: #002554;
+}
+
+.menu p {
+	font-family: 'DifDisplay', 'MaisonNeueBold', sans-serif;
+	text-transform: uppercase;
+}
+
+.lity-content img {
+	height: 80vh;
+	width: auto;
+}
+
+.section-header {
+	display: flex;
+	align-items: center;
+	justify-content: center
+}
+
+.nav-side {
+	@media only screen and (min-width: $large) {
+		padding-top: 150px !important;
+	}
+}
+
+.title-section-number {
+	color: #C4C4C4;
+}
+
+/* SIDE NAV INDENT */
+
+.list-first {
+	list-style-type: decimal;
+}
+
+ol {
+  list-style-type: none;
+  counter-reset: item;
+  margin: 0;
+  padding: 0;
+}
+
+ol > li {
+  display: table;
+  counter-increment: item;
+  margin-bottom: 0.6em;
+}
+
+ol > li:before {
+  display: table-cell;
+  padding-right: 0.6em;
+}
+
+li ol > li {
+  margin: 0;
+}
+
+li ol > li:before {
+  content: counters(item, ".") " ";
+}
+
+.no-number li:before {
+	content: none !important;
+}
+
+.hidden {
+	visibility: hidden;
+}
+
+.menu li {
+	letter-spacing: 0.6em;
+}
+
+.number {
+	line-height: 1.1em !important;
+}
+
+.inline {
+	display: inline;
+}
+
+.play-gif {
+	display: none !important;
+}
+
+.download-page-button:hover {
+	opacity: 0.5 !important;
+}
+
+.desktop-hide {
+	@media only screen and (min-width: $small) {
+		display: none;
+	}
+}

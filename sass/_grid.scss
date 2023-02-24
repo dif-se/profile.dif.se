@@ -1,0 +1,939 @@
+/* Container and row */
+	.container {
+		margin: 0 auto;
+		width: 100%;
+		padding: $container-top-padding $container-left-right-padding $container-bottom-padding;
+	}
+
+	.row-16, .row-12, .row-10, .row-8, .row-7 {
+		max-width: $page-width;
+		margin: 0 auto;
+		padding: $row-top-padding $row-left-right-padding $row-bottom-padding;
+		@include flexbox();
+		@include flex-wrap();
+		@include align-items-start();
+	}
+
+	.row-full {
+		min-width: 100%;
+	}
+
+/* Columns */
+	.col,
+	.col-xs-1,
+	.col-xs-2,
+	.col-xs-3,
+	.col-xs-4,
+	.col-xs-5,
+	.col-xs-6,
+	.col-xs-7,
+	.col-xs-8,
+	.col-xs-9,
+	.col-xs-10,
+	.col-xs-11,
+	.col-xs-12,
+	.col-xs-13,
+	.col-xs-14,
+	.col-xs-15,
+	.col-xs-16,
+	.col-sm-1,
+	.col-sm-2,
+	.col-sm-3,
+	.col-sm-4,
+	.col-sm-5,
+	.col-sm-6,
+	.col-sm-7,
+	.col-sm-8,
+	.col-sm-9,
+	.col-sm-10,
+	.col-sm-11,
+	.col-sm-12,
+	.col-sm-13,
+	.col-sm-14,
+	.col-sm-15,
+	.col-sm-16,
+	.col-md-1,
+	.col-md-2,
+	.col-md-3,
+	.col-md-4,
+	.col-md-5,
+	.col-md-6,
+	.col-md-7,
+	.col-md-8,
+	.col-md-9,
+	.col-md-10,
+	.col-md-11,
+	.col-md-12,
+	.col-md-13,
+	.col-md-14,
+	.col-md-15,
+	.col-md-16,
+	.col-lg-1,
+	.col-lg-2,
+	.col-lg-3,
+	.col-lg-4,
+	.col-lg-5,
+	.col-lg-6,
+	.col-lg-7,
+	.col-lg-8,
+	.col-lg-9,
+	.col-lg-10,
+	.col-lg-11,
+	.col-lg-12,
+	.col-lg-13,
+	.col-lg-14,
+	.col-lg-15,
+	.col-lg-16,
+	{	
+		@include flexbox();
+		@include flex-wrap();
+		flex: 0 1 auto;
+		padding: $gutter;
+		* {
+			flex-grow: 1;
+		}
+		.box {
+			@include flexbox();
+			@include flex-wrap();
+			padding: $gutter*1.2;
+		}
+	}
+
+	.col { flex: 1 1 auto; max-width: $col-width; }
+
+	/* col-xs */
+		.row-16 {
+			.col-xs-1 { flex-basis: $col-16; max-width: $col-16; }
+			.col-xs-2 { flex-basis: $col-16*2; max-width: $col-16*2; }
+			.col-xs-3 { flex-basis: $col-16*3; max-width: $col-16*3; }
+			.col-xs-4 { flex-basis: $col-16*4; max-width: $col-16*4; }
+			.col-xs-5 { flex-basis: $col-16*5; max-width: $col-16*5; }
+			.col-xs-6 { flex-basis: $col-16*6; max-width: $col-16*6; }
+			.col-xs-7 { flex-basis: $col-16*7; max-width: $col-16*7; }
+			.col-xs-8 { flex-basis: $col-16*8; max-width: $col-16*8; }
+			.col-xs-9 { flex-basis: $col-16*9; max-width: $col-16*9; }
+			.col-xs-10 { flex-basis: $col-16*10; max-width: $col-16*10; }
+			.col-xs-11 { flex-basis: $col-16*11; max-width: $col-16*11; }
+			.col-xs-12 { flex-basis: $col-16*12; max-width: $col-16*12; }
+			.col-xs-13 { flex-basis: $col-16*13; max-width: $col-16*13; }
+			.col-xs-14 { flex-basis: $col-16*14; max-width: $col-16*14; }
+			.col-xs-15 { flex-basis: $col-16*15; max-width: $col-16*15; }
+			.col-xs-16 { flex-basis: $col-16*16; max-width: $col-16*16; }
+
+			.col-offset-xs-1 { margin-left: $col-16; }
+			.col-offset-xs-2 { margin-left: $col-16*2; }
+			.col-offset-xs-3 { margin-left: $col-16*3; }
+			.col-offset-xs-4 { margin-left: $col-16*4; }
+			.col-offset-xs-5 { margin-left: $col-16*5; }
+			.col-offset-xs-6 { margin-left: $col-16*6; }
+			.col-offset-xs-7 { margin-left: $col-16*7; }
+			.col-offset-xs-8 { margin-left: $col-16*8; }
+			.col-offset-xs-9 { margin-left: $col-16*9; }
+			.col-offset-xs-10 { margin-left: $col-16*10; }
+			.col-offset-xs-11 { margin-left: $col-16*11; }
+			.col-offset-xs-12 { margin-left: $col-16*12; }
+			.col-offset-xs-13 { margin-left: $col-16*13; }
+			.col-offset-xs-14 { margin-left: $col-16*14; }
+			.col-offset-xs-15 { margin-left: $col-16*15; }
+			.col-offset-xs-16 { margin-left: $col-16*16; }
+		}
+
+		.row-12 {
+			.col-xs-1 { flex-basis: $col-12; max-width: $col-12; }
+			.col-xs-2 { flex-basis: $col-12*2; max-width: $col-12*2; }
+			.col-xs-3 { flex-basis: $col-12*3; max-width: $col-12*3; }
+			.col-xs-4 { flex-basis: $col-12*4; max-width: $col-12*4; }
+			.col-xs-5 { flex-basis: $col-12*5; max-width: $col-12*5; }
+			.col-xs-6 { flex-basis: $col-12*6; max-width: $col-12*6; }
+			.col-xs-7 { flex-basis: $col-12*7; max-width: $col-12*7; }
+			.col-xs-8 { flex-basis: $col-12*8; max-width: $col-12*8; }
+			.col-xs-9 { flex-basis: $col-12*9; max-width: $col-12*9; }
+			.col-xs-10 { flex-basis: $col-12*10; max-width: $col-12*10; }
+			.col-xs-11 { flex-basis: $col-12*11; max-width: $col-12*11; }
+			.col-xs-12 { flex-basis: $col-12*12; max-width: $col-12*12; }
+
+			.col-offset-xs-1 { margin-left: $col-12; }
+			.col-offset-xs-2 { margin-left: $col-12*2; }
+			.col-offset-xs-3 { margin-left: $col-12*3; }
+			.col-offset-xs-4 { margin-left: $col-12*4; }
+			.col-offset-xs-5 { margin-left: $col-12*5; }
+			.col-offset-xs-6 { margin-left: $col-12*6; }
+			.col-offset-xs-7 { margin-left: $col-12*7; }
+			.col-offset-xs-8 { margin-left: $col-12*8; }
+			.col-offset-xs-9 { margin-left: $col-12*9; }
+			.col-offset-xs-10 { margin-left: $col-12*10; }
+			.col-offset-xs-11 { margin-left: $col-12*11; }
+			.col-offset-xs-12 { margin-left: $col-12*12; }
+		}
+
+		.row-10 {
+			.col-xs-1 { flex-basis: $col-10; max-width: $col-10; }
+			.col-xs-2 { flex-basis: $col-10*2; max-width: $col-10*2; }
+			.col-xs-3 { flex-basis: $col-10*3; max-width: $col-10*3; }
+			.col-xs-4 { flex-basis: $col-10*4; max-width: $col-10*4; }
+			.col-xs-5 { flex-basis: $col-10*5; max-width: $col-10*5; }
+			.col-xs-6 { flex-basis: $col-10*6; max-width: $col-10*6; }
+			.col-xs-7 { flex-basis: $col-10*7; max-width: $col-10*7; }
+			.col-xs-8 { flex-basis: $col-10*8; max-width: $col-10*8; }
+			.col-xs-9 { flex-basis: $col-10*9; max-width: $col-10*9; }
+			.col-xs-10 { flex-basis: $col-10*10; max-width: $col-10*10; }
+
+			.col-offset-xs-1 { margin-left: $col-10; }
+			.col-offset-xs-2 { margin-left: $col-10*2; }
+			.col-offset-xs-3 { margin-left: $col-10*3; }
+			.col-offset-xs-4 { margin-left: $col-10*4; }
+			.col-offset-xs-5 { margin-left: $col-10*5; }
+			.col-offset-xs-6 { margin-left: $col-10*6; }
+			.col-offset-xs-7 { margin-left: $col-10*7; }
+			.col-offset-xs-8 { margin-left: $col-10*8; }
+			.col-offset-xs-9 { margin-left: $col-10*9; }
+			.col-offset-xs-10 { margin-left: $col-10*10; }
+		}
+
+		.row-8 {
+			.col-xs-1 { flex-basis: $col-8; max-width: $col-8; }
+			.col-xs-2 { flex-basis: $col-8*2; max-width: $col-8*2; }
+			.col-xs-3 { flex-basis: $col-8*3; max-width: $col-8*3; }
+			.col-xs-4 { flex-basis: $col-8*4; max-width: $col-8*4; }
+			.col-xs-5 { flex-basis: $col-8*5; max-width: $col-8*5; }
+			.col-xs-6 { flex-basis: $col-8*6; max-width: $col-8*6; }
+			.col-xs-7 { flex-basis: $col-8*7; max-width: $col-8*7; }
+			.col-xs-8 { flex-basis: $col-8*8; max-width: $col-8*8; }
+
+			.col-offset-xs-1 { margin-left: $col-8; }
+			.col-offset-xs-2 { margin-left: $col-8*2; }
+			.col-offset-xs-3 { margin-left: $col-8*3; }
+			.col-offset-xs-4 { margin-left: $col-8*4; }
+			.col-offset-xs-5 { margin-left: $col-8*5; }
+			.col-offset-xs-6 { margin-left: $col-8*6; }
+			.col-offset-xs-7 { margin-left: $col-8*7; }
+			.col-offset-xs-8 { margin-left: $col-8*8; }
+		}
+
+		.row-7 {
+			.col-xs-1 { flex-basis: $col-7; max-width: $col-7; }
+			.col-xs-2 { flex-basis: $col-7*2; max-width: $col-7*2; }
+			.col-xs-3 { flex-basis: $col-7*3; max-width: $col-7*3; }
+			.col-xs-4 { flex-basis: $col-7*4; max-width: $col-7*4; }
+			.col-xs-5 { flex-basis: $col-7*5; max-width: $col-7*5; }
+			.col-xs-6 { flex-basis: $col-7*6; max-width: $col-7*6; }
+			.col-xs-7 { flex-basis: $col-7*7; max-width: $col-7*7; }
+
+			.col-offset-xs-1 { margin-left: $col-7; }
+			.col-offset-xs-2 { margin-left: $col-7*2; }
+			.col-offset-xs-3 { margin-left: $col-7*3; }
+			.col-offset-xs-4 { margin-left: $col-7*4; }
+			.col-offset-xs-5 { margin-left: $col-7*5; }
+			.col-offset-xs-6 { margin-left: $col-7*6; }
+			.col-offset-xs-7 { margin-left: $col-7*7; }
+		}
+
+		.col-xs-hide {
+			display: none;
+		}
+
+		.col-xs-show {
+			display: block;
+		}
+
+		
+
+	/* col-sm */	
+		@media only screen and (min-width: $small) {
+			.row-16 {
+				.col-sm-1 { flex-basis: $col-16; max-width: $col-16; }
+				.col-sm-2 { flex-basis: $col-16*2; max-width: $col-16*2; }
+				.col-sm-3 { flex-basis: $col-16*3; max-width: $col-16*3; }
+				.col-sm-4 { flex-basis: $col-16*4; max-width: $col-16*4; }
+				.col-sm-5 { flex-basis: $col-16*5; max-width: $col-16*5; }
+				.col-sm-6 { flex-basis: $col-16*6; max-width: $col-16*6; }
+				.col-sm-7 { flex-basis: $col-16*7; max-width: $col-16*7; }
+				.col-sm-8 { flex-basis: $col-16*8; max-width: $col-16*8; }
+				.col-sm-9 { flex-basis: $col-16*9; max-width: $col-16*9; }
+				.col-sm-10 { flex-basis: $col-16*10; max-width: $col-16*10; }
+				.col-sm-11 { flex-basis: $col-16*11; max-width: $col-16*11; }
+				.col-sm-12 { flex-basis: $col-16*12; max-width: $col-16*12; }
+				.col-sm-13 { flex-basis: $col-16*13; max-width: $col-16*13; }
+				.col-sm-14 { flex-basis: $col-16*14; max-width: $col-16*14; }
+				.col-sm-15 { flex-basis: $col-16*15; max-width: $col-16*15; }
+				.col-sm-16 { flex-basis: $col-16*16; max-width: $col-16*16; }
+
+				.col-offset-sm-1 { margin-left: $col-16; }
+				.col-offset-sm-2 { margin-left: $col-16*2; }
+				.col-offset-sm-3 { margin-left: $col-16*3; }
+				.col-offset-sm-4 { margin-left: $col-16*4; }
+				.col-offset-sm-5 { margin-left: $col-16*5; }
+				.col-offset-sm-6 { margin-left: $col-16*6; }
+				.col-offset-sm-7 { margin-left: $col-16*7; }
+				.col-offset-sm-8 { margin-left: $col-16*8; }
+				.col-offset-sm-9 { margin-left: $col-16*9; }
+				.col-offset-sm-10 { margin-left: $col-16*10; }
+				.col-offset-sm-11 { margin-left: $col-16*11; }
+				.col-offset-sm-12 { margin-left: $col-16*12; }
+				.col-offset-sm-13 { margin-left: $col-16*13; }
+				.col-offset-sm-14 { margin-left: $col-16*14; }
+				.col-offset-sm-15 { margin-left: $col-16*15; }
+				.col-offset-sm-16 { margin-left: $col-16*16; }
+			}
+			.row-12 {
+				.col-sm-1 { flex-basis: $col-12; max-width: $col-12; }
+				.col-sm-2 { flex-basis: $col-12*2; max-width: $col-12*2; }
+				.col-sm-3 { flex-basis: $col-12*3; max-width: $col-12*3; }
+				.col-sm-4 { flex-basis: $col-12*4; max-width: $col-12*4; }
+				.col-sm-5 { flex-basis: $col-12*5; max-width: $col-12*5; }
+				.col-sm-6 { flex-basis: $col-12*6; max-width: $col-12*6; }
+				.col-sm-7 { flex-basis: $col-12*7; max-width: $col-12*7; }
+				.col-sm-8 { flex-basis: $col-12*8; max-width: $col-12*8; }
+				.col-sm-9 { flex-basis: $col-12*9; max-width: $col-12*9; }
+				.col-sm-10 { flex-basis: $col-12*10; max-width: $col-12*10; }
+				.col-sm-11 { flex-basis: $col-12*11; max-width: $col-12*11; }
+				.col-sm-12 { flex-basis: $col-12*12; max-width: $col-12*12; }
+
+				.col-offset-sm-1 { margin-left: $col-12; }
+				.col-offset-sm-2 { margin-left: $col-12*2; }
+				.col-offset-sm-3 { margin-left: $col-12*3; }
+				.col-offset-sm-4 { margin-left: $col-12*4; }
+				.col-offset-sm-5 { margin-left: $col-12*5; }
+				.col-offset-sm-6 { margin-left: $col-12*6; }
+				.col-offset-sm-7 { margin-left: $col-12*7; }
+				.col-offset-sm-8 { margin-left: $col-12*8; }
+				.col-offset-sm-9 { margin-left: $col-12*9; }
+				.col-offset-sm-10 { margin-left: $col-12*10; }
+				.col-offset-sm-11 { margin-left: $col-12*11; }
+				.col-offset-sm-12 { margin-left: $col-12*11; }
+			}
+
+			.row-10 {
+				.col-sm-1 { flex-basis: $col-10; max-width: $col-10; }
+				.col-sm-2 { flex-basis: $col-10*2; max-width: $col-10*2; }
+				.col-sm-3 { flex-basis: $col-10*3; max-width: $col-10*3; }
+				.col-sm-4 { flex-basis: $col-10*4; max-width: $col-10*4; }
+				.col-sm-5 { flex-basis: $col-10*5; max-width: $col-10*5; }
+				.col-sm-6 { flex-basis: $col-10*6; max-width: $col-10*6; }
+				.col-sm-7 { flex-basis: $col-10*7; max-width: $col-10*7; }
+				.col-sm-8 { flex-basis: $col-10*8; max-width: $col-10*8; }
+				.col-sm-9 { flex-basis: $col-10*9; max-width: $col-10*9; }
+				.col-sm-10 { flex-basis: $col-10*10; max-width: $col-10*10; }
+
+				.col-offset-sm-1 { margin-left: $col-10; }
+				.col-offset-sm-2 { margin-left: $col-10*2; }
+				.col-offset-sm-3 { margin-left: $col-10*3; }
+				.col-offset-sm-4 { margin-left: $col-10*4; }
+				.col-offset-sm-5 { margin-left: $col-10*5; }
+				.col-offset-sm-6 { margin-left: $col-10*6; }
+				.col-offset-sm-7 { margin-left: $col-10*7; }
+				.col-offset-sm-8 { margin-left: $col-10*8; }
+				.col-offset-sm-9 { margin-left: $col-10*9; }
+				.col-offset-sm-10 { margin-left: $col-10*10; }
+			}
+
+			.row-8 {
+				.col-sm-1 { flex-basis: $col-8; max-width: $col-8; }
+				.col-sm-2 { flex-basis: $col-8*2; max-width: $col-8*2; }
+				.col-sm-3 { flex-basis: $col-8*3; max-width: $col-8*3; }
+				.col-sm-4 { flex-basis: $col-8*4; max-width: $col-8*4; }
+				.col-sm-5 { flex-basis: $col-8*5; max-width: $col-8*5; }
+				.col-sm-6 { flex-basis: $col-8*6; max-width: $col-8*6; }
+				.col-sm-7 { flex-basis: $col-8*7; max-width: $col-8*7; }
+				.col-sm-8 { flex-basis: $col-8*8; max-width: $col-8*8; }
+				.col-sm-9 { flex-basis: $col-8*9; max-width: $col-8*9; }
+
+				.col-offset-sm-1 { margin-left: $col-8; }
+				.col-offset-sm-2 { margin-left: $col-8*2; }
+				.col-offset-sm-3 { margin-left: $col-8*3; }
+				.col-offset-sm-4 { margin-left: $col-8*4; }
+				.col-offset-sm-5 { margin-left: $col-8*5; }
+				.col-offset-sm-6 { margin-left: $col-8*6; }
+				.col-offset-sm-7 { margin-left: $col-8*7; }
+				.col-offset-sm-8 { margin-left: $col-8*8; }
+			}
+
+			.row-7 {
+				.col-sm-1 { flex-basis: $col-7; max-width: $col-7; }
+				.col-sm-2 { flex-basis: $col-7*2; max-width: $col-7*2; }
+				.col-sm-3 { flex-basis: $col-7*3; max-width: $col-7*3; }
+				.col-sm-4 { flex-basis: $col-7*4; max-width: $col-7*4; }
+				.col-sm-5 { flex-basis: $col-7*5; max-width: $col-7*5; }
+				.col-sm-6 { flex-basis: $col-7*6; max-width: $col-7*6; }
+				.col-sm-7 { flex-basis: $col-7*7; max-width: $col-7*7; }
+
+				.col-offset-sm-1 { margin-left: $col-7; }
+				.col-offset-sm-2 { margin-left: $col-7*2; }
+				.col-offset-sm-3 { margin-left: $col-7*3; }
+				.col-offset-sm-4 { margin-left: $col-7*4; }
+				.col-offset-sm-5 { margin-left: $col-7*5; }
+				.col-offset-sm-6 { margin-left: $col-7*6; }
+				.col-offset-sm-7 { margin-left: $col-7*7; }
+			}
+
+			.col-sm-hide {
+				display: none;
+			}
+
+			.col-sm-show {
+				display: block;
+			}
+		}
+
+	/* col-md */
+		@media only screen and (min-width: $medium) {
+			.row-16 {
+				.col-md-1 { flex-basis: $col-16; max-width: $col-16; }
+				.col-md-2 { flex-basis: $col-16*2; max-width: $col-16*2; }
+				.col-md-3 { flex-basis: $col-16*3; max-width: $col-16*3; }
+				.col-md-4 { flex-basis: $col-16*4; max-width: $col-16*4; }
+				.col-md-5 { flex-basis: $col-16*5; max-width: $col-16*5; }
+				.col-md-6 { flex-basis: $col-16*6; max-width: $col-16*6; }
+				.col-md-7 { flex-basis: $col-16*7; max-width: $col-16*7; }
+				.col-md-8 { flex-basis: $col-16*8; max-width: $col-16*8; }
+				.col-md-9 { flex-basis: $col-16*9; max-width: $col-16*9; }
+				.col-md-10 { flex-basis: $col-16*10; max-width: $col-16*10; }
+				.col-md-11 { flex-basis: $col-16*11; max-width: $col-16*11; }
+				.col-md-12 { flex-basis: $col-16*12; max-width: $col-16*12; }
+				.col-md-13 { flex-basis: $col-16*13; max-width: $col-16*13; }
+				.col-md-14 { flex-basis: $col-16*14; max-width: $col-16*14; }
+				.col-md-15 { flex-basis: $col-16*15; max-width: $col-16*15; }
+				.col-md-16 { flex-basis: $col-16*16; max-width: $col-16*16; }
+
+				.col-offset-md-1 { margin-left: $col-16; }
+				.col-offset-md-2 { margin-left: $col-16*2; }
+				.col-offset-md-3 { margin-left: $col-16*3; }
+				.col-offset-md-4 { margin-left: $col-16*4; }
+				.col-offset-md-5 { margin-left: $col-16*5; }
+				.col-offset-md-6 { margin-left: $col-16*6; }
+				.col-offset-md-7 { margin-left: $col-16*7; }
+				.col-offset-md-8 { margin-left: $col-16*8; }
+				.col-offset-md-9 { margin-left: $col-16*9; }
+				.col-offset-md-10 { margin-left: $col-16*10; }
+				.col-offset-md-11 { margin-left: $col-16*11; }
+				.col-offset-md-12 { margin-left: $col-16*12; }
+				.col-offset-md-13 { margin-left: $col-16*13; }
+				.col-offset-md-14 { margin-left: $col-16*14; }
+				.col-offset-md-15 { margin-left: $col-16*15; }
+				.col-offset-md-16 { margin-left: $col-16*16; }
+			}
+
+			.row-12 {
+				.col-md-1 { flex-basis: $col-12; max-width: $col-12; }
+				.col-md-2 { flex-basis: $col-12*2; max-width: $col-12*2; }
+				.col-md-3 { flex-basis: $col-12*3; max-width: $col-12*3; }
+				.col-md-4 { flex-basis: $col-12*4; max-width: $col-12*4; }
+				.col-md-5 { flex-basis: $col-12*5; max-width: $col-12*5; }
+				.col-md-6 { flex-basis: $col-12*6; max-width: $col-12*6; }
+				.col-md-7 { flex-basis: $col-12*7; max-width: $col-12*7; }
+				.col-md-8 { flex-basis: $col-12*8; max-width: $col-12*8; }
+				.col-md-9 { flex-basis: $col-12*9; max-width: $col-12*9; }
+				.col-md-10 { flex-basis: $col-12*10; max-width: $col-12*10; }
+				.col-md-11 { flex-basis: $col-12*11; max-width: $col-12*11; }
+				.col-md-12 { flex-basis: $col-12*12; max-width: $col-12*12; }
+
+				.col-offset-md-1 { margin-left: $col-12; }
+				.col-offset-md-2 { margin-left: $col-12*2; }
+				.col-offset-md-3 { margin-left: $col-12*3; }
+				.col-offset-md-4 { margin-left: $col-12*4; }
+				.col-offset-md-5 { margin-left: $col-12*5; }
+				.col-offset-md-6 { margin-left: $col-12*6; }
+				.col-offset-md-7 { margin-left: $col-12*7; }
+				.col-offset-md-8 { margin-left: $col-12*8; }
+				.col-offset-md-9 { margin-left: $col-12*9; }
+				.col-offset-md-10 { margin-left: $col-12*10; }
+				.col-offset-md-11 { margin-left: $col-12*11; }
+				.col-offset-md-12 { margin-left: $col-12*11; }
+			}
+
+			.row-10 {
+				.col-md-1 { flex-basis: $col-10; max-width: $col-10; }
+				.col-md-2 { flex-basis: $col-10*2; max-width: $col-10*2; }
+				.col-md-3 { flex-basis: $col-10*3; max-width: $col-10*3; }
+				.col-md-4 { flex-basis: $col-10*4; max-width: $col-10*4; }
+				.col-md-5 { flex-basis: $col-10*5; max-width: $col-10*5; }
+				.col-md-6 { flex-basis: $col-10*6; max-width: $col-10*6; }
+				.col-md-7 { flex-basis: $col-10*7; max-width: $col-10*7; }
+				.col-md-8 { flex-basis: $col-10*8; max-width: $col-10*8; }
+				.col-md-9 { flex-basis: $col-10*9; max-width: $col-10*9; }
+				.col-md-10 { flex-basis: $col-10*10; max-width: $col-10*10; }
+
+				.col-offset-md-1 { margin-left: $col-10; }
+				.col-offset-md-2 { margin-left: $col-10*2; }
+				.col-offset-md-3 { margin-left: $col-10*3; }
+				.col-offset-md-4 { margin-left: $col-10*4; }
+				.col-offset-md-5 { margin-left: $col-10*5; }
+				.col-offset-md-6 { margin-left: $col-10*6; }
+				.col-offset-md-7 { margin-left: $col-10*7; }
+				.col-offset-md-8 { margin-left: $col-10*8; }
+				.col-offset-md-9 { margin-left: $col-10*9; }
+				.col-offset-md-10 { margin-left: $col-10*10; }
+
+			}
+
+			.row-8 {
+				.col-md-1 { flex-basis: $col-8; max-width: $col-8; }
+				.col-md-2 { flex-basis: $col-8*2; max-width: $col-8*2; }
+				.col-md-3 { flex-basis: $col-8*3; max-width: $col-8*3; }
+				.col-md-4 { flex-basis: $col-8*4; max-width: $col-8*4; }
+				.col-md-5 { flex-basis: $col-8*5; max-width: $col-8*5; }
+				.col-md-6 { flex-basis: $col-8*6; max-width: $col-8*6; }
+				.col-md-7 { flex-basis: $col-8*7; max-width: $col-8*7; }
+				.col-md-8 { flex-basis: $col-8*8; max-width: $col-8*8; }
+
+				.col-offset-md-1 { margin-left: $col-8; }
+				.col-offset-md-2 { margin-left: $col-8*2; }
+				.col-offset-md-3 { margin-left: $col-8*3; }
+				.col-offset-md-4 { margin-left: $col-8*4; }
+				.col-offset-md-5 { margin-left: $col-8*5; }
+				.col-offset-md-6 { margin-left: $col-8*6; }
+				.col-offset-md-7 { margin-left: $col-8*7; }
+				.col-offset-md-8 { margin-left: $col-8*8; }
+			}
+
+			.row-7 {
+				.col-md-1 { flex-basis: $col-7; max-width: $col-7; }
+				.col-md-2 { flex-basis: $col-7*2; max-width: $col-7*2; }
+				.col-md-3 { flex-basis: $col-7*3; max-width: $col-7*3; }
+				.col-md-4 { flex-basis: $col-7*4; max-width: $col-7*4; }
+				.col-md-5 { flex-basis: $col-7*5; max-width: $col-7*5; }
+				.col-md-6 { flex-basis: $col-7*6; max-width: $col-7*6; }
+				.col-md-7 { flex-basis: $col-7*7; max-width: $col-7*7; }
+
+				.col-offset-md-1 { margin-left: $col-7; }
+				.col-offset-md-2 { margin-left: $col-7*2; }
+				.col-offset-md-3 { margin-left: $col-7*3; }
+				.col-offset-md-4 { margin-left: $col-7*4; }
+				.col-offset-md-5 { margin-left: $col-7*5; }
+				.col-offset-md-6 { margin-left: $col-7*6; }
+				.col-offset-md-7 { margin-left: $col-7*7; }
+			}
+
+			.col-md-hide {
+				display: none;
+			}
+
+			.col-md-show {
+				display: block;
+			}
+		}
+
+	/* col-lg */
+		@media only screen and (min-width: $large) {
+			.row-16 {
+				.col-lg-1 { flex-basis: $col-16; max-width: $col-16; }
+				.col-lg-2 { flex-basis: $col-16*2; max-width: $col-16*2; }
+				.col-lg-3 { flex-basis: $col-16*3; max-width: $col-16*3; }
+				.col-lg-4 { flex-basis: $col-16*4; max-width: $col-16*4; }
+				.col-lg-5 { flex-basis: $col-16*5; max-width: $col-16*5; }
+				.col-lg-6 { flex-basis: $col-16*6; max-width: $col-16*6; }
+				.col-lg-7 { flex-basis: $col-16*7; max-width: $col-16*7; }
+				.col-lg-8 { flex-basis: $col-16*8; max-width: $col-16*8; }
+				.col-lg-9 { flex-basis: $col-16*9; max-width: $col-16*9; }
+				.col-lg-10 { flex-basis: $col-16*10; max-width: $col-16*10; }
+				.col-lg-11 { flex-basis: $col-16*11; max-width: $col-16*11; }
+				.col-lg-12 { flex-basis: $col-16*12; max-width: $col-16*12; }
+				.col-lg-13 { flex-basis: $col-16*13; max-width: $col-16*13; }
+				.col-lg-14 { flex-basis: $col-16*14; max-width: $col-16*14; }
+				.col-lg-15 { flex-basis: $col-16*15; max-width: $col-16*15; }
+				.col-lg-16 { flex-basis: $col-16*16; max-width: $col-16*16; }
+
+				.col-offset-lg-1 { margin-left: $col-16; }
+				.col-offset-lg-2 { margin-left: $col-16*2; }
+				.col-offset-lg-3 { margin-left: $col-16*3; }
+				.col-offset-lg-4 { margin-left: $col-16*4; }
+				.col-offset-lg-5 { margin-left: $col-16*5; }
+				.col-offset-lg-6 { margin-left: $col-16*6; }
+				.col-offset-lg-7 { margin-left: $col-16*7; }
+				.col-offset-lg-8 { margin-left: $col-16*8; }
+				.col-offset-lg-9 { margin-left: $col-16*9; }
+				.col-offset-lg-10 { margin-left: $col-16*10; }
+				.col-offset-lg-11 { margin-left: $col-16*11; }
+				.col-offset-lg-12 { margin-left: $col-16*12; }
+				.col-offset-lg-13 { margin-left: $col-16*13; }
+				.col-offset-lg-14 { margin-left: $col-16*14; }
+				.col-offset-lg-15 { margin-left: $col-16*15; }
+				.col-offset-lg-16 { margin-left: $col-16*16; }
+			}
+			.row-12 {
+				.col-lg-1 { flex-basis: $col-12; max-width: $col-12; }
+				.col-lg-2 { flex-basis: $col-12*2; max-width: $col-12*2; }
+				.col-lg-3 { flex-basis: $col-12*3; max-width: $col-12*3; }
+				.col-lg-4 { flex-basis: $col-12*4; max-width: $col-12*4; }
+				.col-lg-5 { flex-basis: $col-12*5; max-width: $col-12*5; }
+				.col-lg-6 { flex-basis: $col-12*6; max-width: $col-12*6; }
+				.col-lg-7 { flex-basis: $col-12*7; max-width: $col-12*7; }
+				.col-lg-8 { flex-basis: $col-12*8; max-width: $col-12*8; }
+				.col-lg-9 { flex-basis: $col-12*9; max-width: $col-12*9; }
+				.col-lg-10 { flex-basis: $col-12*10; max-width: $col-12*10; }
+				.col-lg-11 { flex-basis: $col-12*11; max-width: $col-12*11; }
+				.col-lg-12 { flex-basis: $col-12*12; max-width: $col-12*12; }
+
+				.col-offset-lg-1 { margin-left: $col-12; }
+				.col-offset-lg-2 { margin-left: $col-12*2; }
+				.col-offset-lg-3 { margin-left: $col-12*3; }
+				.col-offset-lg-4 { margin-left: $col-12*4; }
+				.col-offset-lg-5 { margin-left: $col-12*5; }
+				.col-offset-lg-6 { margin-left: $col-12*6; }
+				.col-offset-lg-7 { margin-left: $col-12*7; }
+				.col-offset-lg-8 { margin-left: $col-12*8; }
+				.col-offset-lg-9 { margin-left: $col-12*9; }
+				.col-offset-lg-10 { margin-left: $col-12*10; }
+				.col-offset-lg-11 { margin-left: $col-12*11; }
+				.col-offset-lg-12 { margin-left: $col-12*11; }
+			}
+
+			.row-10 {
+				.col-lg-1 { flex-basis: $col-10; max-width: $col-10; }
+				.col-lg-2 { flex-basis: $col-10*2; max-width: $col-10*2; }
+				.col-lg-3 { flex-basis: $col-10*3; max-width: $col-10*3; }
+				.col-lg-4 { flex-basis: $col-10*4; max-width: $col-10*4; }
+				.col-lg-5 { flex-basis: $col-10*5; max-width: $col-10*5; }
+				.col-lg-6 { flex-basis: $col-10*6; max-width: $col-10*6; }
+				.col-lg-7 { flex-basis: $col-10*7; max-width: $col-10*7; }
+				.col-lg-8 { flex-basis: $col-10*8; max-width: $col-10*8; }
+				.col-lg-9 { flex-basis: $col-10*9; max-width: $col-10*9; }
+				.col-lg-10 { flex-basis: $col-10*10; max-width: $col-10*10; }
+
+				.col-offset-lg-1 { margin-left: $col-10; }
+				.col-offset-lg-2 { margin-left: $col-10*2; }
+				.col-offset-lg-3 { margin-left: $col-10*3; }
+				.col-offset-lg-4 { margin-left: $col-10*4; }
+				.col-offset-lg-5 { margin-left: $col-10*5; }
+				.col-offset-lg-6 { margin-left: $col-10*6; }
+				.col-offset-lg-7 { margin-left: $col-10*7; }
+				.col-offset-lg-8 { margin-left: $col-10*8; }
+				.col-offset-lg-9 { margin-left: $col-10*9; }
+				.col-offset-lg-10 { margin-left: $col-10*10; }
+			}
+
+			.row-8 {
+				.col-lg-1 { flex-basis: $col-8; max-width: $col-8; }
+				.col-lg-2 { flex-basis: $col-8*2; max-width: $col-8*2; }
+				.col-lg-3 { flex-basis: $col-8*3; max-width: $col-8*3; }
+				.col-lg-4 { flex-basis: $col-8*4; max-width: $col-8*4; }
+				.col-lg-5 { flex-basis: $col-8*5; max-width: $col-8*5; }
+				.col-lg-6 { flex-basis: $col-8*6; max-width: $col-8*6; }
+				.col-lg-7 { flex-basis: $col-8*7; max-width: $col-8*7; }
+				.col-lg-8 { flex-basis: $col-8*8; max-width: $col-8*8; }
+
+				.col-offset-lg-1 { margin-left: $col-8; }
+				.col-offset-lg-2 { margin-left: $col-8*2; }
+				.col-offset-lg-3 { margin-left: $col-8*3; }
+				.col-offset-lg-4 { margin-left: $col-8*4; }
+				.col-offset-lg-5 { margin-left: $col-8*5; }
+				.col-offset-lg-6 { margin-left: $col-8*6; }
+				.col-offset-lg-7 { margin-left: $col-8*7; }
+				.col-offset-lg-8 { margin-left: $col-8*8; }
+			}
+
+			.row-7 {
+				.col-lg-1 { flex-basis: $col-7; max-width: $col-7; }
+				.col-lg-2 { flex-basis: $col-7*2; max-width: $col-7*2; }
+				.col-lg-3 { flex-basis: $col-7*3; max-width: $col-7*3; }
+				.col-lg-4 { flex-basis: $col-7*4; max-width: $col-7*4; }
+				.col-lg-5 { flex-basis: $col-7*5; max-width: $col-7*5; }
+				.col-lg-6 { flex-basis: $col-7*6; max-width: $col-7*6; }
+				.col-lg-7 { flex-basis: $col-7*7; max-width: $col-7*7; }
+
+				.col-offset-lg-1 { margin-left: $col-7; }
+				.col-offset-lg-2 { margin-left: $col-7*2; }
+				.col-offset-lg-3 { margin-left: $col-7*3; }
+				.col-offset-lg-4 { margin-left: $col-7*4; }
+				.col-offset-lg-5 { margin-left: $col-7*5; }
+				.col-offset-lg-6 { margin-left: $col-7*6; }
+				.col-offset-lg-7 { margin-left: $col-7*7; }
+			}
+
+			.col-lg-hide {
+				display: none;
+			}
+
+			.col-lg-show {
+				display: block;
+			}
+		}
+
+		/* col-xl */
+		@media only screen and (min-width: $xlarge) {
+			.row-16 {
+				.col-xl-1 { flex-basis: $col-16; max-width: $col-16; }
+				.col-xl-2 { flex-basis: $col-16*2; max-width: $col-16*2; }
+				.col-xl-3 { flex-basis: $col-16*3; max-width: $col-16*3; }
+				.col-xl-4 { flex-basis: $col-16*4; max-width: $col-16*4; }
+				.col-xl-5 { flex-basis: $col-16*5; max-width: $col-16*5; }
+				.col-xl-6 { flex-basis: $col-16*6; max-width: $col-16*6; }
+				.col-xl-7 { flex-basis: $col-16*7; max-width: $col-16*7; }
+				.col-xl-8 { flex-basis: $col-16*8; max-width: $col-16*8; }
+				.col-xl-9 { flex-basis: $col-16*9; max-width: $col-16*9; }
+				.col-xl-10 { flex-basis: $col-16*10; max-width: $col-16*10; }
+				.col-xl-11 { flex-basis: $col-16*11; max-width: $col-16*11; }
+				.col-xl-12 { flex-basis: $col-16*12; max-width: $col-16*12; }
+				.col-xl-13 { flex-basis: $col-16*13; max-width: $col-16*13; }
+				.col-xl-14 { flex-basis: $col-16*14; max-width: $col-16*14; }
+				.col-xl-15 { flex-basis: $col-16*15; max-width: $col-16*15; }
+				.col-xl-16 { flex-basis: $col-16*16; max-width: $col-16*16; }
+
+				.col-offset-xl-1 { margin-left: $col-16; }
+				.col-offset-xl-2 { margin-left: $col-16*2; }
+				.col-offset-xl-3 { margin-left: $col-16*3; }
+				.col-offset-xl-4 { margin-left: $col-16*4; }
+				.col-offset-xl-5 { margin-left: $col-16*5; }
+				.col-offset-xl-6 { margin-left: $col-16*6; }
+				.col-offset-xl-7 { margin-left: $col-16*7; }
+				.col-offset-xl-8 { margin-left: $col-16*8; }
+				.col-offset-xl-9 { margin-left: $col-16*9; }
+				.col-offset-xl-10 { margin-left: $col-16*10; }
+				.col-offset-xl-11 { margin-left: $col-16*11; }
+				.col-offset-xl-12 { margin-left: $col-16*12; }
+				.col-offset-xl-13 { margin-left: $col-16*13; }
+				.col-offset-xl-14 { margin-left: $col-16*14; }
+				.col-offset-xl-15 { margin-left: $col-16*15; }
+				.col-offset-xl-16 { margin-left: $col-16*16; }
+			}
+			.row-12 {
+				.col-xl-1 { flex-basis: $col-12; max-width: $col-12; }
+				.col-xl-2 { flex-basis: $col-12*2; max-width: $col-12*2; }
+				.col-xl-3 { flex-basis: $col-12*3; max-width: $col-12*3; }
+				.col-xl-4 { flex-basis: $col-12*4; max-width: $col-12*4; }
+				.col-xl-5 { flex-basis: $col-12*5; max-width: $col-12*5; }
+				.col-xl-6 { flex-basis: $col-12*6; max-width: $col-12*6; }
+				.col-xl-7 { flex-basis: $col-12*7; max-width: $col-12*7; }
+				.col-xl-8 { flex-basis: $col-12*8; max-width: $col-12*8; }
+				.col-xl-9 { flex-basis: $col-12*9; max-width: $col-12*9; }
+				.col-xl-10 { flex-basis: $col-12*10; max-width: $col-12*10; }
+				.col-xl-11 { flex-basis: $col-12*11; max-width: $col-12*11; }
+				.col-xl-12 { flex-basis: $col-12*12; max-width: $col-12*12; }
+
+				.col-offset-xl-1 { margin-left: $col-12; }
+				.col-offset-xl-2 { margin-left: $col-12*2; }
+				.col-offset-xl-3 { margin-left: $col-12*3; }
+				.col-offset-xl-4 { margin-left: $col-12*4; }
+				.col-offset-xl-5 { margin-left: $col-12*5; }
+				.col-offset-xl-6 { margin-left: $col-12*6; }
+				.col-offset-xl-7 { margin-left: $col-12*7; }
+				.col-offset-xl-8 { margin-left: $col-12*8; }
+				.col-offset-xl-9 { margin-left: $col-12*9; }
+				.col-offset-xl-10 { margin-left: $col-12*10; }
+				.col-offset-xl-11 { margin-left: $col-12*11; }
+				.col-offset-xl-12 { margin-left: $col-12*11; }
+			}
+
+			.row-10 {
+				.col-xl-1 { flex-basis: $col-10; max-width: $col-10; }
+				.col-xl-2 { flex-basis: $col-10*2; max-width: $col-10*2; }
+				.col-xl-3 { flex-basis: $col-10*3; max-width: $col-10*3; }
+				.col-xl-4 { flex-basis: $col-10*4; max-width: $col-10*4; }
+				.col-xl-5 { flex-basis: $col-10*5; max-width: $col-10*5; }
+				.col-xl-6 { flex-basis: $col-10*6; max-width: $col-10*6; }
+				.col-xl-7 { flex-basis: $col-10*7; max-width: $col-10*7; }
+				.col-xl-8 { flex-basis: $col-10*8; max-width: $col-10*8; }
+				.col-xl-9 { flex-basis: $col-10*9; max-width: $col-10*9; }
+				.col-xl-10 { flex-basis: $col-10*10; max-width: $col-10*10; }
+
+				.col-offset-xl-1 { margin-left: $col-10; }
+				.col-offset-xl-2 { margin-left: $col-10*2; }
+				.col-offset-xl-3 { margin-left: $col-10*3; }
+				.col-offset-xl-4 { margin-left: $col-10*4; }
+				.col-offset-xl-5 { margin-left: $col-10*5; }
+				.col-offset-xl-6 { margin-left: $col-10*6; }
+				.col-offset-xl-7 { margin-left: $col-10*7; }
+				.col-offset-xl-8 { margin-left: $col-10*8; }
+				.col-offset-xl-9 { margin-left: $col-10*9; }
+				.col-offset-xl-10 { margin-left: $col-10*10; }
+			}
+
+			.row-8 {
+				.col-xl-1 { flex-basis: $col-8; max-width: $col-8; }
+				.col-xl-2 { flex-basis: $col-8*2; max-width: $col-8*2; }
+				.col-xl-3 { flex-basis: $col-8*3; max-width: $col-8*3; }
+				.col-xl-4 { flex-basis: $col-8*4; max-width: $col-8*4; }
+				.col-xl-5 { flex-basis: $col-8*5; max-width: $col-8*5; }
+				.col-xl-6 { flex-basis: $col-8*6; max-width: $col-8*6; }
+				.col-xl-7 { flex-basis: $col-8*7; max-width: $col-8*7; }
+				.col-xl-8 { flex-basis: $col-8*8; max-width: $col-8*8; }
+
+				.col-offset-xl-1 { margin-left: $col-8; }
+				.col-offset-xl-2 { margin-left: $col-8*2; }
+				.col-offset-xl-3 { margin-left: $col-8*3; }
+				.col-offset-xl-4 { margin-left: $col-8*4; }
+				.col-offset-xl-5 { margin-left: $col-8*5; }
+				.col-offset-xl-6 { margin-left: $col-8*6; }
+				.col-offset-xl-7 { margin-left: $col-8*7; }
+				.col-offset-xl-8 { margin-left: $col-8*8; }
+			}
+
+			.row-7 {
+				.col-xl-1 { flex-basis: $col-7; max-width: $col-7; }
+				.col-xl-2 { flex-basis: $col-7*2; max-width: $col-7*2; }
+				.col-xl-3 { flex-basis: $col-7*3; max-width: $col-7*3; }
+				.col-xl-4 { flex-basis: $col-7*4; max-width: $col-7*4; }
+				.col-xl-5 { flex-basis: $col-7*5; max-width: $col-7*5; }
+				.col-xl-6 { flex-basis: $col-7*6; max-width: $col-7*6; }
+				.col-xl-7 { flex-basis: $col-7*7; max-width: $col-7*7; }
+
+				.col-offset-xl-1 { margin-left: $col-7; }
+				.col-offset-xl-2 { margin-left: $col-7*2; }
+				.col-offset-xl-3 { margin-left: $col-7*3; }
+				.col-offset-xl-4 { margin-left: $col-7*4; }
+				.col-offset-xl-5 { margin-left: $col-7*5; }
+				.col-offset-xl-6 { margin-left: $col-7*6; }
+				.col-offset-xl-7 { margin-left: $col-7*7; }
+			}
+
+			.col-xl-hide {
+				display: none;
+			}
+
+			.col-xl-show {
+				display: block;
+			}
+		}
+
+
+		/* col-jumbo */
+		@media only screen and (min-width: $jumbo) {
+			.row-16 {
+				.col-jumbo-1 { flex-basis: $col-16; max-width: $col-16; }
+				.col-jumbo-2 { flex-basis: $col-16*2; max-width: $col-16*2; }
+				.col-jumbo-3 { flex-basis: $col-16*3; max-width: $col-16*3; }
+				.col-jumbo-4 { flex-basis: $col-16*4; max-width: $col-16*4; }
+				.col-jumbo-5 { flex-basis: $col-16*5; max-width: $col-16*5; }
+				.col-jumbo-6 { flex-basis: $col-16*6; max-width: $col-16*6; }
+				.col-jumbo-7 { flex-basis: $col-16*7; max-width: $col-16*7; }
+				.col-jumbo-8 { flex-basis: $col-16*8; max-width: $col-16*8; }
+				.col-jumbo-9 { flex-basis: $col-16*9; max-width: $col-16*9; }
+				.col-jumbo-10 { flex-basis: $col-16*10; max-width: $col-16*10; }
+				.col-jumbo-11 { flex-basis: $col-16*11; max-width: $col-16*11; }
+				.col-jumbo-12 { flex-basis: $col-16*12; max-width: $col-16*12; }
+				.col-jumbo-13 { flex-basis: $col-16*13; max-width: $col-16*13; }
+				.col-jumbo-14 { flex-basis: $col-16*14; max-width: $col-16*14; }
+				.col-jumbo-15 { flex-basis: $col-16*15; max-width: $col-16*15; }
+				.col-jumbo-16 { flex-basis: $col-16*16; max-width: $col-16*16; }
+
+				.col-offset-jumbo-1 { margin-left: $col-16; }
+				.col-offset-jumbo-2 { margin-left: $col-16*2; }
+				.col-offset-jumbo-3 { margin-left: $col-16*3; }
+				.col-offset-jumbo-4 { margin-left: $col-16*4; }
+				.col-offset-jumbo-5 { margin-left: $col-16*5; }
+				.col-offset-jumbo-6 { margin-left: $col-16*6; }
+				.col-offset-jumbo-7 { margin-left: $col-16*7; }
+				.col-offset-jumbo-8 { margin-left: $col-16*8; }
+				.col-offset-jumbo-9 { margin-left: $col-16*9; }
+				.col-offset-jumbo-10 { margin-left: $col-16*10; }
+				.col-offset-jumbo-11 { margin-left: $col-16*11; }
+				.col-offset-jumbo-12 { margin-left: $col-16*12; }
+				.col-offset-jumbo-13 { margin-left: $col-16*13; }
+				.col-offset-jumbo-14 { margin-left: $col-16*14; }
+				.col-offset-jumbo-15 { margin-left: $col-16*15; }
+				.col-offset-jumbo-16 { margin-left: $col-16*16; }
+			}
+			.row-12 {
+				.col-jumbo-1 { flex-basis: $col-12; max-width: $col-12; }
+				.col-jumbo-2 { flex-basis: $col-12*2; max-width: $col-12*2; }
+				.col-jumbo-3 { flex-basis: $col-12*3; max-width: $col-12*3; }
+				.col-jumbo-4 { flex-basis: $col-12*4; max-width: $col-12*4; }
+				.col-jumbo-5 { flex-basis: $col-12*5; max-width: $col-12*5; }
+				.col-jumbo-6 { flex-basis: $col-12*6; max-width: $col-12*6; }
+				.col-jumbo-7 { flex-basis: $col-12*7; max-width: $col-12*7; }
+				.col-jumbo-8 { flex-basis: $col-12*8; max-width: $col-12*8; }
+				.col-jumbo-9 { flex-basis: $col-12*9; max-width: $col-12*9; }
+				.col-jumbo-10 { flex-basis: $col-12*10; max-width: $col-12*10; }
+				.col-jumbo-11 { flex-basis: $col-12*11; max-width: $col-12*11; }
+				.col-jumbo-12 { flex-basis: $col-12*12; max-width: $col-12*12; }
+
+				.col-offset-jumbo-1 { margin-left: $col-12; }
+				.col-offset-jumbo-2 { margin-left: $col-12*2; }
+				.col-offset-jumbo-3 { margin-left: $col-12*3; }
+				.col-offset-jumbo-4 { margin-left: $col-12*4; }
+				.col-offset-jumbo-5 { margin-left: $col-12*5; }
+				.col-offset-jumbo-6 { margin-left: $col-12*6; }
+				.col-offset-jumbo-7 { margin-left: $col-12*7; }
+				.col-offset-jumbo-8 { margin-left: $col-12*8; }
+				.col-offset-jumbo-9 { margin-left: $col-12*9; }
+				.col-offset-jumbo-10 { margin-left: $col-12*10; }
+				.col-offset-jumbo-11 { margin-left: $col-12*11; }
+				.col-offset-jumbo-12 { margin-left: $col-12*11; }
+			}
+
+			.row-10 {
+				.col-jumbo-1 { flex-basis: $col-10; max-width: $col-10; }
+				.col-jumbo-2 { flex-basis: $col-10*2; max-width: $col-10*2; }
+				.col-jumbo-3 { flex-basis: $col-10*3; max-width: $col-10*3; }
+				.col-jumbo-4 { flex-basis: $col-10*4; max-width: $col-10*4; }
+				.col-jumbo-5 { flex-basis: $col-10*5; max-width: $col-10*5; }
+				.col-jumbo-6 { flex-basis: $col-10*6; max-width: $col-10*6; }
+				.col-jumbo-7 { flex-basis: $col-10*7; max-width: $col-10*7; }
+				.col-jumbo-8 { flex-basis: $col-10*8; max-width: $col-10*8; }
+				.col-jumbo-9 { flex-basis: $col-10*9; max-width: $col-10*9; }
+				.col-jumbo-10 { flex-basis: $col-10*10; max-width: $col-10*10; }
+
+				.col-offset-jumbo-1 { margin-left: $col-10; }
+				.col-offset-jumbo-2 { margin-left: $col-10*2; }
+				.col-offset-jumbo-3 { margin-left: $col-10*3; }
+				.col-offset-jumbo-4 { margin-left: $col-10*4; }
+				.col-offset-jumbo-5 { margin-left: $col-10*5; }
+				.col-offset-jumbo-6 { margin-left: $col-10*6; }
+				.col-offset-jumbo-7 { margin-left: $col-10*7; }
+				.col-offset-jumbo-8 { margin-left: $col-10*8; }
+				.col-offset-jumbo-9 { margin-left: $col-10*9; }
+				.col-offset-jumbo-10 { margin-left: $col-10*10; }
+			}
+
+			.row-8 {
+				.col-jumbo-1 { flex-basis: $col-8; max-width: $col-8; }
+				.col-jumbo-2 { flex-basis: $col-8*2; max-width: $col-8*2; }
+				.col-jumbo-3 { flex-basis: $col-8*3; max-width: $col-8*3; }
+				.col-jumbo-4 { flex-basis: $col-8*4; max-width: $col-8*4; }
+				.col-jumbo-5 { flex-basis: $col-8*5; max-width: $col-8*5; }
+				.col-jumbo-6 { flex-basis: $col-8*6; max-width: $col-8*6; }
+				.col-jumbo-7 { flex-basis: $col-8*7; max-width: $col-8*7; }
+				.col-jumbo-8 { flex-basis: $col-8*8; max-width: $col-8*8; }
+
+				.col-offset-jumbo-1 { margin-left: $col-8; }
+				.col-offset-jumbo-2 { margin-left: $col-8*2; }
+				.col-offset-jumbo-3 { margin-left: $col-8*3; }
+				.col-offset-jumbo-4 { margin-left: $col-8*4; }
+				.col-offset-jumbo-5 { margin-left: $col-8*5; }
+				.col-offset-jumbo-6 { margin-left: $col-8*6; }
+				.col-offset-jumbo-7 { margin-left: $col-8*7; }
+				.col-offset-jumbo-8 { margin-left: $col-8*8; }
+			}
+
+			.row-7 {
+				.col-jumbo-1 { flex-basis: $col-7; max-width: $col-7; }
+				.col-jumbo-2 { flex-basis: $col-7*2; max-width: $col-7*2; }
+				.col-jumbo-3 { flex-basis: $col-7*3; max-width: $col-7*3; }
+				.col-jumbo-4 { flex-basis: $col-7*4; max-width: $col-7*4; }
+				.col-jumbo-5 { flex-basis: $col-7*5; max-width: $col-7*5; }
+				.col-jumbo-6 { flex-basis: $col-7*6; max-width: $col-7*6; }
+				.col-jumbo-7 { flex-basis: $col-7*7; max-width: $col-7*7; }
+
+				.col-offset-jumbo-1 { margin-left: $col-7; }
+				.col-offset-jumbo-2 { margin-left: $col-7*2; }
+				.col-offset-jumbo-3 { margin-left: $col-7*3; }
+				.col-offset-jumbo-4 { margin-left: $col-7*4; }
+				.col-offset-jumbo-5 { margin-left: $col-7*5; }
+				.col-offset-jumbo-6 { margin-left: $col-7*6; }
+				.col-offset-jumbo-7 { margin-left: $col-7*7; }
+			}
+
+			.col-jumbo-hide {
+				display: none;
+			}
+
+			.col-jumbo-show {
+				display: block;
+			}
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

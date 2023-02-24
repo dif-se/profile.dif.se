@@ -1,0 +1,90 @@
+/* Colors */
+	/* Identity */
+	$color-1: #60CD18;
+	$color-2: #EFEFEF;
+	$color-3: #673AB6;
+	$color-4: #F03529;
+	$color-5: #41B0EE;
+	$color-1-1: #45b400;
+	$color-2-1: #ffb400;
+	$color-3-1: #4f2c99;
+	$color-4-1: #d81a1a;
+	$color-5-1: #0092e1;
+	$color-1-2: #379d00;
+	$color-2-2: #f8a000;
+	$color-3-2: #3f2587;
+	$color-4-2: #bb000c;
+	$color-5-2: #007ac7;
+	$color-6: #C4C4C4;
+	/* Functional */
+	$alert: #f00;
+	$cta: #ff9b41;
+	/* Greyscale */
+	$light-blue: #32baf2;
+	$dark-blue: #002554;
+	$dark: #1a1a1a;
+	$dark-grey: #555;
+	$medium-grey: #6b6b6b;
+	$grey: #cecece;
+	$light-grey: #fafafa;
+	$light: #fff;
+	$transparent: transparent;
+	
+/* Font sizes and leading */
+	$font-family: 'MaisonNeue', sans-serif;
+	$font-weigth: 300;
+	$base-font-size: 62.5%; /* 62.5% = 10px = 1rem */ 
+	$font-size: 1.6rem; /* Base font size */
+	$line-height: 2.2rem;	/* Base line height */
+
+/* Grid */
+	$page-width: 1400px; /* Set the max-width of the page */
+	$col-width: 100%; /* Set the width of the widest possible column */
+	$col-16: 100%/16; /* Set the width of the widest possible column */
+	$col-12: 100%/12; /* Set the width of the widest possible column */
+	$col-10: 100%/10; /* Set the width of the widest possible column */
+	$col-8: 100%/8; /* Set the width of the widest possible column */
+	$col-7: 100%/7; /* Set the width of the widest possible column */
+	$gutter: $font-size; /* Set the gutter of the columns and bottom padding for any child of a col */
+
+
+/* Margins and paddings */
+	$row-bottom-padding: $gutter*1;
+	$row-left-right-padding: $gutter/2;
+	$row-top-padding: 0;
+	$container-top-padding: $gutter*5;
+	$container-left-right-padding: 0;
+	$container-bottom-padding: $gutter*3;
+	$custom-padding: $gutter; /* Set base size for padding classes */
+	$custom-margin: $gutter; /* Set base size for margin classes */
+	$sectionheight: $line-height*5; /* Set base size for custom section heights */
+
+/* Media querie breakpoints */
+	$xsmall: 368px;	/* sets min-width */
+	$small: 768px; /* sets min-width */
+	$medium: 1080px; /* sets min-width */
+	$large: 1280px;	/* sets min-width */
+	$xlarge: 1440px; /* sets min-width */
+	$jumbo: 1700px;	/* sets min-width */
+
+/* Navigation */
+	$nav-height: 80px; /* Set the height of the nav and top padding of body */
+	$nav-side-width: 300px;	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
